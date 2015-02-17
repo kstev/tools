@@ -1,5 +1,7 @@
 #!/bin/bash
 #
+grep '12.04' /etc/lsb-release || exit
+[ -a /etc/chef-server ] || exit
 echo '[Cookbook version]'
 CB_VER=$(knife cookbook list | awk '/nova-network/ {print $2}')
 for i in $(knife ssh "role:*" "echo" 2>/dev/null | sort | uniq -w 6); do echo "$i $CB_VER"; done | egrep '[a-zA-Z]'
