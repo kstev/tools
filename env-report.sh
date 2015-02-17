@@ -1,5 +1,6 @@
 #!/bin/bash
 #
+[ $(whoami) == 'root' ] || exit
 grep '12.04' /etc/lsb-release >/dev/null || exit
 [ -a /etc/chef-server ] || exit
 echo '[Cookbook version]'
