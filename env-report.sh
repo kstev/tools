@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-grep '12.04' /etc/lsb-release || exit
+grep '12.04' /etc/lsb-release >/dev/null || exit
 [ -a /etc/chef-server ] || exit
 echo '[Cookbook version]'
 CB_VER=$(knife cookbook list | awk '/nova-network/ {print $2}')
