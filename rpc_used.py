@@ -58,7 +58,7 @@ if __name__ == '__main__':
     print("Total Disk in Cluster : %s GB" % (USAGE['DISK_TOTAL']))
     print("Disk in Use : %s GB" % (USAGE['DISK_USED']))
     print("Calculated Disk Available : %s GB" % (USAGE['DISK_AVAIL']))
-    print("Percent of Disk Used : %.2f %%" % (((USAGE['DISK_TOTAL'] - USAGE['DISK_AVAIL']) / (USAGE['DISK_TOTAL'] * ALLOCATION_RATIOS[0])) * 100 ))
+    print("Percent of Disk Used : %.2f %%" % (((USAGE['DISK_TOTAL'] - USAGE['DISK_AVAIL']) / (USAGE['DISK_TOTAL'] * ALLOCATION_RATIOS[1])) * 100 ))
     print
     print("Total RAM in Cluster : %s GB" % (USAGE['RAM_TOTAL']))
     print("RAM in Use : %s GB" % (USAGE['RAM_USED']))
